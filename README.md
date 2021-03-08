@@ -54,3 +54,4 @@ Sample configuration:
     ]
 }
 ```
+*NODE: All options passed to global.configuration are passed down to app.configuration unless app specifies its own value.*
