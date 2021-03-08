@@ -28,10 +28,11 @@ Sample configuration:
 ```hjson
 {
     global: {
-        configuration: {
-            user: james
-        },
+        user: james
         appDirectory: "/alis-apps/"
+        configuration: {
+            ...
+        }
     },
     apps: [
         {
