@@ -24,7 +24,6 @@ LATEST=$(curl -sL https://api.github.com/repos/cryon-io/alis-cli/releases/latest
 TMP_NAME="/tmp/$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
 wget "https://github.com/cryon-io/alis-cli/releases/download/$LATEST/alis-cli-unix-$(uname -p).zip" -O "$TMP_NAME" &&
-    printf "%s\n" "elify();zip.extract_file('$TMP_FILE', 'alis-cli-unix-$(uname -p)', '/usr/sbin/', { flattenRootDir = true})" | eli &&
-    mv "alis-cli-unix-$(uname -p)" "alis-cli"
+    printf "%s\n" "elify();zip.extract_file('$TMP_FILE', 'alis-cli-unix-$(uname -p)', '/usr/sbin/alis-cli', { flattenRootDir = true})" | eli &&
     chmod +x /usr/sbin/alis-cli &&
     echo "alis-cli $LATEST successfuly installed."
