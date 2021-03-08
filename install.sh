@@ -18,12 +18,12 @@ if [ ! $AMI_DOWNLOADED = "TRUE" ]; then
     exit 1
 fi
 
-# install ami
+# install alis-cli
 LATEST=$(curl -sL https://api.github.com/repos/cryon-io/alis-cli/releases/latest | grep tag_name | sed 's/  "tag_name": "//g' | sed 's/",//g')
 
 TMP_NAME="/tmp/$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
-wget "https://github.com/cryon-io/ami/releases/download/$LATEST/alis-cli-unix-$(uname -p).zip" -O "$TMP_NAME" &&
+wget "https://github.com/cryon-io/alis-cli/releases/download/$LATEST/alis-cli-unix-$(uname -p).zip" -O "$TMP_NAME" &&
     printf "%s\n" "elify();zip.extract_file('$TMP_FILE', 'alis-cli-unix-$(uname -p)', '/usr/sbin/', { flattenRootDir = true})" | eli &&
     mv "alis-cli-unix-$(uname -p)" "alis-cli"
     chmod +x /usr/sbin/alis-cli &&
