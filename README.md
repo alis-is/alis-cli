@@ -45,6 +45,7 @@ Sample configuration:
         {
             id: node2,
             type: nice.node,
+            directory: "/custom/path/to/app/"
             configuration: {
                 ...
             },
