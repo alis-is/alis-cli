@@ -1,6 +1,6 @@
 # Setup
 
-`wget -q https://raw.githubusercontent.com/cryon-io/alis-cli/master/install.sh -O /tmp/install.sh && sh /tmp/install.sh`
+`wget -q https://raw.githubusercontent.com/alis-is/alis-cli/master/install.sh -O /tmp/install.sh && sh /tmp/install.sh`
 
 # Usage
 
